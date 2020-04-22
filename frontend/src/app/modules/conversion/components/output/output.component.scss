@@ -1,0 +1,23 @@
+.example-ripple-container {
+    cursor: pointer;
+    text-align: center;
+  
+    // width: 250px;
+    max-width: 20rem;
+    height: 120px;
+    // line-height: 300px;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+  }
+  

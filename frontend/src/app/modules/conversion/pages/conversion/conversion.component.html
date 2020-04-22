@@ -1,0 +1,49 @@
+<div class="m-30">
+    <form [formGroup]="conversionForm" (ngSubmit)="onSubmit()">
+        <mat-grid-list cols="{{gridConfig.cols}}" rowHeight="{{gridConfig.rowHeight}}">
+        
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Value To Convert</mat-label>
+                    <input matInput placeholder="100" formControlName="input">
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>From</mat-label>
+                    <mat-select formControlName="from">
+                      <mat-option *ngFor="let unit of units" [value]="unit">
+                        {{unit}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>To</mat-label>
+                    <mat-select formControlName="to">
+                      <mat-option *ngFor="let unit of units" [value]="unit">
+                        {{unit}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Student's Response</mat-label>
+                    <input matInput placeholder="212" formControlName="studentResponse">
+                  </mat-form-field>
+            </mat-grid-tile>
+        </mat-grid-list>
+        
+    </form>
+    <br />
+    <div>
+      <app-output [output]="output"></app-output>
+    </div>
+
+</div>
+
